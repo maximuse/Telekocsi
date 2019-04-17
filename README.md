@@ -7,7 +7,9 @@ Az autok.csv fájl minden sora egy-egy hirdető adatát tartalmazza pontosvessz�
 Az igenyek.csv fájl minden sora egy-egy felhasználói igényt tartalmaz. Az adatok egymás után – ahogy a fejlécben is látszik – az igénylő azonosítója, az induló- és célállomás, valamint az utasok száma.
 
 A megoldás során vegye figyelembe a következőket:
+
 • Az ékezetmentes kiírás is elfogadott.
+
 • A feladat jobb megértése érdekében tanulmányozza a mintákat is!
 
 Készítsen konzolos vagy grafikus programot Telekocsi néven, amely az alábbi feladatokat oldja meg!
