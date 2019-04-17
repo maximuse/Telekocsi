@@ -71,9 +71,9 @@ class Actions {
     static int budapestMiskolcDb(ArrayList<Autok> autok) {
         int db = 0;
 
-        for (int i = 0; i < autok.size(); i++) {
-            if (autok.get(i).getIndulas().equals("Budapest") && autok.get(i).getCel().equals("Miskolc")) {
-                db += autok.get(i).getFerohely();
+        for (Autok auto : autok) {
+            if (auto.getIndulas().equals("Budapest") && auto.getCel().equals("Miskolc")) {
+                db += auto.getFerohely();
             }
         }
 
@@ -84,10 +84,10 @@ class Actions {
         int db = 0;
         String data = "";
 
-        for (int i = 0; i < autok.size(); i++) {
-            if (autok.get(i).getFerohely() > db) {
-                db = autok.get(i).getFerohely();
-                data = "(" + autok.get(i).getFerohely() + " db) a(z) " + autok.get(i).getIndulas() + "-" + autok.get(i).getCel();
+        for (Autok auto : autok) {
+            if (auto.getFerohely() > db) {
+                db = auto.getFerohely();
+                data = "(" + auto.getFerohely() + " db) a(z) " + auto.getIndulas() + "-" + auto.getCel();
             }
         }
 
@@ -97,10 +97,10 @@ class Actions {
     static ArrayList<String[]> talalat(ArrayList<Autok> autok, ArrayList<Igenyek> igenyek) {
         ArrayList<String[]> lista = new ArrayList<>();
 
-        for (int i = 0; i < igenyek.size(); i++) {
-            for (int j = 0; j < autok.size(); j++) {
-                if (igenyek.get(i).getIndulas().equals(autok.get(j).getIndulas()) &&  igenyek.get(i).getCel().equals(autok.get(j).getCel()) &&  igenyek.get(i).getSzemelyek() == autok.get(j).getFerohely()) {
-                    lista.add(new String[] {igenyek.get(i).getAzonosito(), autok.get(j).getRendszam()});
+        for (Igenyek igeny : igenyek) {
+            for (Autok auto : autok) {
+                if (igeny.getIndulas().equals(auto.getIndulas()) && igeny.getCel().equals(auto.getCel()) && igeny.getSzemelyek() == auto.getFerohely()) {
+                    lista.add(new String[]{igeny.getAzonosito(), auto.getRendszam()});
                     break;
                 }
             }
@@ -114,14 +114,14 @@ class Actions {
         String data = "";
         String sor;
 
-        for (int i = 0; i < igenyek.size(); i++) {
-            for (int j = 0; j < autok.size(); j++) {
-                if (igenyek.get(i).getIndulas().equals(autok.get(j).getIndulas()) &&  igenyek.get(i).getCel().equals(autok.get(j).getCel()) &&  igenyek.get(i).getSzemelyek() == autok.get(j).getFerohely()) {
-                    data = igenyek.get(i).getAzonosito() + ": Rendszám: " + autok.get(j).getRendszam() + ", Telefonszám: " + autok.get(j).getTelefonszam();
+        for (Igenyek igeny : igenyek) {
+            for (Autok auto : autok) {
+                if (igeny.getIndulas().equals(auto.getIndulas()) && igeny.getCel().equals(auto.getCel()) && igeny.getSzemelyek() == auto.getFerohely()) {
+                    data = igeny.getAzonosito() + ": Rendszám: " + auto.getRendszam() + ", Telefonszám: " + auto.getTelefonszam();
                     break;
                 }
                 else {
-                    data = igenyek.get(i).getAzonosito() + ": Sajnos nem sikerült autót találni";
+                    data = igeny.getAzonosito() + ": Sajnos nem sikerült autót találni";
                 }
             }
 
