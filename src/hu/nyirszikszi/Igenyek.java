@@ -13,36 +13,20 @@ public class Igenyek {
         this.szemelyek = szemelyek;
     }
 
-    public String getAzonosito() {
+    String getAzonosito() {
         return azonosito;
     }
 
-    public void setAzonosito(String azonosito) {
-        this.azonosito = azonosito;
-    }
-
-    public String getIndulas() {
+    String getIndulas() {
         return indulas;
     }
 
-    public void setIndulas(String indulas) {
-        this.indulas = indulas;
-    }
-
-    public String getCel() {
+    String getCel() {
         return cel;
     }
 
-    public void setCel(String cel) {
-        this.cel = cel;
-    }
-
-    public int getSzemelyek() {
+    int getSzemelyek() {
         return szemelyek;
-    }
-
-    public void setSzemelyek(int szemelyek) {
-        this.szemelyek = szemelyek;
     }
 
     @Override

@@ -7,7 +7,7 @@ public class Autok {
     private String telefonszam;
     private int ferohely;
 
-    public Autok(String indulas, String cel, String rendszam, String telefonszam, int ferohely) {
+    Autok(String indulas, String cel, String rendszam, String telefonszam, int ferohely) {
         this.indulas = indulas;
         this.cel = cel;
         this.rendszam = rendszam;
@@ -15,44 +15,24 @@ public class Autok {
         this.ferohely = ferohely;
     }
 
-    public String getIndulas() {
+    String getIndulas() {
         return indulas;
     }
 
-    public void setIndulas(String indulas) {
-        this.indulas = indulas;
-    }
-
-    public String getCel() {
+    String getCel() {
         return cel;
     }
 
-    public void setCel(String cel) {
-        this.cel = cel;
-    }
-
-    public String getRendszam() {
+    String getRendszam() {
         return rendszam;
     }
 
-    public void setRendszam(String rendszam) {
-        this.rendszam = rendszam;
-    }
-
-    public String getTelefonszam() {
+    String getTelefonszam() {
         return telefonszam;
     }
 
-    public void setTelefonszam(String telefonszam) {
-        this.telefonszam = telefonszam;
-    }
-
-    public int getFerohely() {
+    int getFerohely() {
         return ferohely;
-    }
-
-    public void setFerohely(int ferohely) {
-        this.ferohely = ferohely;
     }
 
     @Override
