@@ -12,9 +12,11 @@ class Actions {
             String sor = raf.readLine();
             sor = raf.readLine();
             String[] szeletek;
+            String utf;
 
             while(sor != null) {
-                szeletek = sor.split(";");
+                utf = new String(sor.getBytes("ISO-8859-1"), "UTF-8");
+                szeletek = utf.split(";");
 
                 String indulas = szeletek[0];
                 String cel = szeletek[1];
@@ -45,9 +47,11 @@ class Actions {
             String sor = raf.readLine();
             sor = raf.readLine();
             String[] szeletek;
+            String utf;
 
             while(sor != null) {
-                szeletek = sor.split(";");
+                utf = new String(sor.getBytes("ISO-8859-1"), "UTF-8");
+                szeletek = utf.split(";");
 
                 String azonosito = szeletek[0];
                 String indulas = szeletek[1];
@@ -130,8 +134,9 @@ class Actions {
 
         try {
             RandomAccessFile raf = new RandomAccessFile(fajl, "rw");
-            for (String l : lista) {
-                sor = l + "\r\n";
+            for (String s : lista) {
+                sor = s + "\r\n";
+                //raf.writeUTF(sor);
                 raf.writeBytes(sor);
             }
 

@@ -8,6 +8,7 @@ public class Main {
         /*for (Autok a: autok) {
             System.out.println(a);
         }*/
+
         ArrayList<Igenyek> igenyek = Actions.igenyekBeolvas("igenyek.csv");
         /*for (Igenyek i: igenyek) {
             System.out.println(i);
